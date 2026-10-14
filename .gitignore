@@ -1,0 +1,9 @@
+# Live session artifacts — NEVER commit these
+config/send_request_template.json
+config/credentials.json
+/tmp/
+
+# Python
+__pycache__/
+*.pyc
+.DS_Store
