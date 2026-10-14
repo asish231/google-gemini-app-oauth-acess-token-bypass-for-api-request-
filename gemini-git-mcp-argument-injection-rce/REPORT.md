@@ -136,7 +136,7 @@ Result — `/tmp/RCE_PROOF2` was created containing:
 RCE_<uid>@<redacted>.local
 ```
 
-`$(id -u)` and `$(hostname)` evaluated **as the logged-in user (uid 501)** —
+`$(id -u)` and `$(hostname)` evaluated **as the logged-in user** —
 arbitrary shell code ran to completion. This is the conclusive proof of command
 execution, not merely a side effect.
 
