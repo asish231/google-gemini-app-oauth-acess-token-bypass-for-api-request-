@@ -6,7 +6,7 @@ recoverable form. This repo chains three findings into a working proof: **fresh
 access tokens minted from the app's own extracted credentials, then live
 send/receive chat against the app's private RPC API** (`robinfrontend-pa.googleapis.com`).
 
-> 🔥 **New finding (separate folder):** [`gemini-git-mcp-argument-injection-rce/`](gemini-git-mcp-argument-injection-rce/)
+>  **New finding (separate folder):** [`gemini-git-mcp-argument-injection-rce/`](gemini-git-mcp-argument-injection-rce/)
 > — argument injection in the app's bundled `git_mcp_server` leading to arbitrary
 > command execution (found exploit, verified with 3 PoCs). Full report, evidence
 > log, and PoC code there.
