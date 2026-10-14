@@ -26,7 +26,7 @@ and the entire toolset then operates on `*.md` files inside it with the user's
 full privileges.
 
 Concretely verified on a directory that was never initialized as a vault (no
-`.obsidian` marker) and never connected to the app:
+`.obsidian` marker) and never connected to the app (7/7 tools):
 
 | Tool | Result on arbitrary directory |
 |---|---|
@@ -35,7 +35,8 @@ Concretely verified on a directory that was never initialized as a vault (no
 | `obsidian_append_note` | ✅ file modified |
 | `obsidian_list_notes` | ✅ file listed |
 | `obsidian_delete_note` | ✅ file permanently removed |
-| `obsidian_patch_note` / `obsidian_move_note` | schemas present (same `vault_path` pattern); same class |
+| `obsidian_patch_note` | ✅ file content search/replaced in non-vault dir (verified: `REDACTED BY ATTACKER` written) |
+| `obsidian_move_note` | ✅ file renamed across non-vault dir (`victim.md` → `stolen.md`, original gone) |
 
 The server *does* correctly block relative `../` traversal inside a given vault
 ("attempts to escape vault path"), proving the vault boundary is an intended
