@@ -133,7 +133,7 @@ file was created.
 Result — `/tmp/RCE_PROOF2` was created containing:
 
 ```
-RCE_501@<hostname-redacted>.local
+RCE_<uid>@<redacted>.local
 ```
 
 `$(id -u)` and `$(hostname)` evaluated **as the logged-in user (uid 501)** —

