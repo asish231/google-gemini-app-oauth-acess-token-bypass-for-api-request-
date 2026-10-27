@@ -11,13 +11,13 @@ send/receive chat against the app's private RPC API** (`robinfrontend-pa.googlea
 > command execution (found exploit, verified with 3 PoCs). Full report, evidence
 > log, and PoC code there.
 
-> 🔥 **Second finding (separate folder):** [`gemini-obsidian-mcp-vault-path-bypass/`](gemini-obsidian-mcp-vault-path-bypass/)
+>  **Second finding (separate folder):** [`gemini-obsidian-mcp-vault-path-bypass/`](gemini-obsidian-mcp-vault-path-bypass/)
 > — the bundled `obsidian_mcp_server` never validates `vault_path` as a real vault
 > or approved folder: the full note toolset (create/read/append/delete/list) operates
 > on arbitrary user-writable directories (verified 5/5, with traversal-blocked
 > control). Report + evidence + PoC there.
 
-> ⚠️ **Disclaimer — educational/security-research use only.** Run these tools
+>  **Disclaimer — educational/security-research use only.** Run these tools
 > only against your own machine and your own Google account. Reusing extracted
 > credentials outside the official app almost certainly violates Google's ToS.
 > The extracted `client_secret` belongs to Google; this repo deliberately
